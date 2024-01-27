@@ -1,0 +1,49 @@
+body {
+    position: relative; /*new reference for absolute positioning within it*/
+    height: 1000vh;
+}
+
+#gravity-link {
+    position: absolute;
+    bottom: 0;
+}
+a {
+    visibility: hidden;
+}
+
+.grass img{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 300px;
+    width: 100%;
+}
+
+.apple {
+    position: absolute;
+    top: -500px;
+    height:100px; 
+    width: 100px;
+}
+
+.tree-top img{
+    position: absolute;
+    top: -240px;
+    right: -150px;
+    height: 900px;
+    
+}
+
+.tree-trunk img{ /*tree trunk*/
+    position: absolute; /*if no ancestor with position relative to viewport*/
+    bottom: -100px;
+    right: 20%;
+    height: 97.5%;
+    width: 120px;
+}
+
+.isaac-newton img{
+    position: absolute;
+    top: 4%;
+    height: 400px;
+}

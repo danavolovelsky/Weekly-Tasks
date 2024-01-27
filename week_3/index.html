@@ -1,47 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-      
-    <title>Draw with checkboxes</title>
-   
-    <style>
-        h1 {
-          text-align: center; 
-          color: #e26f90; 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-        }
- 
-        .form-check-input {
-            background-color: #e26f90; 
-            scale: 1.3;
-        }
 
-        .form-check-input:checked {
-            background-color: #054d0a; /* Color of the heart */
-            background-image: none;
-            border: none;
-        }
-    </style>  
-   
-    <h1>Checkbox Art - Click to draw</h1>
+    <link rel="stylesheet" href="style.css">
+    <title>Checkbox art</title>
+
 </head>
+<div id="margin-header">
+    <h1>Checkbox Art</h1>
+</div>
 
 <body>
-    
+
+    <div id="margin-body">
+        <label for="color">Color:</label>
+        <select name="colors" id="colorSelection">
+            <option value="#e26f90" selected>Pink</option>
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+
+        </select>
+        <br>
+        <button id="restartButton" class="btn btn-outline-dark" type="button">Restart</button>
+
+        <p> Let your creativity lose! Draw shapes and pictures in a unique way, utilising checkboxes. To draw, hover
+            over the checkboxes with the mouse and to change color select one from the drop-down menu. To start over
+            with a clean canvas click the Restart button. Have Fun! </p>
+
+        <form id="save">
+
+            <label htmlFor="name">
+                Title:
+                <input type="text" id="name" name="name" placeholder="(Artwork title)" class="form-control" required />
+            </label>
+
+            <label htmlFor="email">
+                Email:
+                <input type="email" id="email" name="email" placeholder="(Your email address ...)" class="form-control"
+                    required />
+            </label>
+            <br>
+            <button id="saveButton" class="btn btn-outline-dark" type="button">Save</button>
+        </form>
+    </div>
+
+    <div id="checkboxContainer"></div>
+
     <script>
-        const amountOfCheckboxes = 2970;
-        let checkboxes = ''; // Declare empty checkbox variable
+        document.getElementById('restartButton').addEventListener('click', function () {
+            const checkboxInputs = document.querySelectorAll('.form-check-input');
+            checkboxInputs.forEach(input => {
+                input.checked = false; // Uncheck the checkbox
+                input.style.backgroundColor = '#e26f90';
+            });
+        });
+
+        const checkboxContainer = document.getElementById('checkboxContainer');
+
+        function changeColor(color) {
+            const checkboxInputs = document.querySelectorAll('.form-check-input');
+            checkboxInputs.forEach(input => {
+                input.dataset.hoverColor = color; // Change background color
+            });
+        }
+
+        document.getElementById('colorSelection').addEventListener('change', function () {
+            const selectedColor = this.value; // Get the selected color
+            changeColor(selectedColor); // Change the color of checkboxes
+        });
+        changeColor('#e26f90');
+
+        const amountOfCheckboxes = Math.floor(window.innerWidth / 16) * Math.floor(window.innerHeight / 16);
+
+        let checkboxes = '';
         for (let i = 1; i <= amountOfCheckboxes; i++) {
             checkboxes += ' <input class="form-check-input" type="checkbox" id="flexCheckDefault">';
         }
-        document.body.innerHTML += checkboxes; //add content stored in checkboxes variable to body
-    </script>   
-     
+        checkboxContainer.innerHTML = checkboxes; //add content stored in checkboxes variable to body
+
+        // Change checkboxes to stay green after hover
+        const checkboxInputs = document.querySelectorAll('.form-check-input');
+        checkboxInputs.forEach(input => {
+            input.addEventListener('mouseenter', () => {
+                input.checked = true;
+                input.style.backgroundColor = input.dataset.hoverColor;
+            });
+        });
+    </script>
+    </div>
 </body>
+
 </html>

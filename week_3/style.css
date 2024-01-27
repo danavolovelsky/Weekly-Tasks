@@ -1,0 +1,60 @@
+body {
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 20vw;
+}
+
+.form-check-input {
+    background-color: #e26f90;
+    scale: 1.3;
+}
+
+.form-check-input:hover,
+.form-check-input:checked {
+    background-image: none;
+    border: none;
+    width: 16px;
+    height: 16px;
+    font-size: initial;
+    background-color: #e26f90;
+
+}
+
+#margin-header {
+    position: absolute;
+    width: 18vw;
+    left: 1vw;
+    font-family: fantasy;
+    text-align: center;
+    padding-top: 5vh;
+
+}
+
+#margin-body {
+    position: absolute;
+    width: 18vw;
+    left: 1vw;
+    top: 13vh;
+    font-family: fantasy;
+    text-align: center;
+
+}
+
+
+
+#margin-body label,
+button,
+p {
+    margin-top: 3vh;
+    margin-bottom: 1.5vh;
+}
+
+
+
+button:hover {
+    background-color: #e26f90;
+
+}
