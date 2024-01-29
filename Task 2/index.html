@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick a theme</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="parent-container">
+        <fieldset>
+            <button class="visibility-button"> 🎨 </button>
+            <legend>Pick a theme</legend>
+            <div class="grid-visibility hidden">
+                <div class="wrapper grid-header">
+                    <div class="header-item"></div>
+                    <div class="header-item">Cartoon</div>
+                    <!--https://pngtree.com/freepng/cartoon-house-illustration_8780795.html-->
+                    <div class="header-item">Pixel</div>
+                    <!--https://www.megavoxels.com/learn/how-to-make-a-pixel-art-house/-->
+                    <div class="header-item">Pencil</div>
+                    <!--https://www.freepik.com/free-photos-vectors/house-outline/3-->
+                </div>
+                <!-- https://codepen.io/thekrkn/pen/KzLXLw-->
+                <div class="wrapper">
+                    <div class="flex-item">House</div>
+                    <label class="flex-item">
+                        <input type="radio" value="cartoon" name="house" checked> <span></span>
+                    </label>
+                    <label class="flex-item">
+                        <input type="radio" value="pixel" name="house"> <span></span>
+                    </label>
+                    <label class="flex-item">
+                        <input type="radio" value="paper" name="house"> <span></span>
+                    </label>
+
+                </div>
+                <div class="wrapper">
+
+                    <div class="flex-item">Door</div>
+                    <label class="flex-item">
+                        <input type="radio" value="cartoon" name="door" checked> <span></span>
+                    </label>
+                    <label class="flex-item">
+                        <input type="radio" value="pixel" name="door"> <span></span>
+                    </label>
+                    <label class="flex-item">
+                        <input type="radio" value="paper" name="door"> <span></span>
+                    </label>
+
+                </div>
+                <div class="wrapper">
+
+                    <div class="flex-item">Window</div>
+                    <label class="flex-item">
+                        <input type="radio" value="cartoon" name="window" checked> <span></span>
+                    </label>
+                    <label class="flex-item">
+                        <input type="radio" value="pixel" name="window"> <span></span>
+                    </label>
+                    <label class="flex-item">
+                        <input type="radio" value="paper" name="window"> <span></span>
+                    </label>
+
+                </div>
+            </div>
+        </fieldset>
+        <div class="toolbar">
+            <h3>Text size:</h3>
+            <button class="accessibility-button" id="increase-text-size">+</button>
+            <button class="accessibility-button" id="decrease-text-size">--</button>
+        </div>
+    </div>
+    <div id="image-container">
+        <img src="cartoonHouse.png" alt="Cartoon style house" class="theme-image house cartoonHouse">
+        <img src="paperHouse.png" alt="Pencil drawing style house" class="theme-image house paperHouse"
+            style="display: none;">
+        <img src="pixelHouse.png" alt="Pixel style house" class="theme-image house pixelHouse" style="display: none;">
+
+        <img src="cartoonDoor.png" alt="Cartoon style door" class="theme-image door">
+        <img src="paperDoor.png" alt="Pencil drawing style door" class="theme-image door paperDoor"
+            style="display: none;">
+        <img src="pixelDoor.png" alt="Pixel style door" class="theme-image door pixelDoor" style="display: none;">
+
+        <img src="cartoonWindow.png" alt="Cartoon style window" class="theme-image window">
+        <img src="paperWindow.png" alt="Pencil drawing style window" class="theme-image window" style="display: none;">
+        <img src="pixelWindow.png" alt="Pixel style window" class="theme-image window" style="display: none;">
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

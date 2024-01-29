@@ -1,0 +1,137 @@
+body {
+    overflow: hidden;
+    background-image: url("background.png");
+    /*https://pngtree.com/freepng/cartoon-monarch-butterfly-clip-art_6116912.html , https://pngtree.com/freepng/cartoon-monarch-butterfly-clip-art_6116912.html .  https://pngtree.com/freepng/white-drawing-butterfly-clipart_4153184.html*/
+}
+
+.toolbar {
+    padding-left: 90vw;
+}
+
+.accessibility-button {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.parent-container {
+    position: absolute;
+    width: 99%;
+    /* Add this to create a positioned ancestor */
+}
+
+.wrapper,
+.grid-header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, minmax(24.175vw, 1fr));
+    margin-top: 7px;
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+}
+
+.header-item {
+    text-align: center;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 0.3vw solid #000000;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+span {
+    background-color: #000000;
+}
+
+.hidden {
+    display: none;
+}
+
+.visibility-button {
+    cursor: pointer;
+    margin: 2vh;
+    font-size: x-large;
+}
+
+.visibility-button:hover {
+    background: #000000;
+
+}
+
+.theme-image.house {
+    position: absolute;
+    display: block;
+    margin-top: 13%;
+    width: 40%;
+    margin-left: 25%;
+    margin-right: auto;
+}
+
+.theme-image.house.cartoonHouse {
+    margin-top: 17%;
+    margin-left: 27%;
+}
+
+.theme-image.house.paperHouse {
+    width: 35%;
+    margin-top: 15%;
+    margin-left: 27%;
+}
+
+.theme-image.house.pixelHouse {
+    width: 43%;
+    margin-top: 15%;
+    margin-left: 27%;
+}
+
+.theme-image.door {
+    display: block;
+    position: absolute;
+    top: 85%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 8%;
+    z-index: 1;
+}
+
+.theme-image.window {
+    display: block;
+    position: absolute;
+    top: 75%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+    width: 8%;
+    z-index: 1;
+}
+
+
+
+@media screen and (min-height: 880px) and (max-width: 1624px) and (orientation: landscape) {
+
+    .theme-image.door,
+    .theme-image.window {
+        top: 60%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .theme-image.door,
+    .theme-image.window {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 812px) and (orientation: landscape) {}
