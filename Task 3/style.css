@@ -1,0 +1,87 @@
+body {
+    position: relative;
+    height: 1000vh;
+    overflow-x: hidden;
+}
+
+#gravity-link {
+    position: absolute;
+    bottom: 0;
+}
+
+a {
+    visibility: hidden;
+}
+
+.title {
+    text-align: center;
+}
+
+.scene {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    position: relative;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(98, 140, 77);
+    /* Fallback color */
+    background: linear-gradient(180deg, rgba(80, 170, 255, 1) 0%, rgba(232, 240, 237, 1) 18%, rgba(98, 140, 77, 1) 100%);
+}
+
+
+.grass img {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    z-index: 2;
+}
+
+.apple {
+    position: absolute;
+    height: 10vw;
+
+    z-index: 3;
+}
+
+.tree-top img {
+    position: relative;
+    top: -26%;
+    left: 18%;
+    width: 65%;
+    z-index: 1;
+    /* Adjust the height as needed */
+}
+
+.tree-trunk img {
+    position: absolute;
+    top: 4%;
+    right: 45%;
+    height: 96%;
+    width: 9vw;
+}
+
+.isaac-newton img {
+    position: fixed;
+    bottom: 4%;
+    left: 4%;
+    height: 40vh;
+}
+
+@media screen and (min-height: 880px) and (max-width: 1624px) and (orientation: landscape) {}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .tree-top {
+        width: 60%;
+    }
+
+
+}
