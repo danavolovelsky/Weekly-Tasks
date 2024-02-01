@@ -1,4 +1,4 @@
-window.onload = function () { // sets scroll position of the window to a very large value (so apples wont be on the floor straight away)
+window.onbeforeunload = function () { // sets scroll position of the window to a very large value (so apples wont be on the floor straight away)
     window.scrollTo(0, 100000);
 }
 
