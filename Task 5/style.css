@@ -1,0 +1,93 @@
+body {
+    background-color: #FAF9F6;
+}
+
+h1,
+h2 {
+    text-align: center;
+    padding-top: 5%;
+    color: #6E260E;
+}
+
+.sort {
+    display: block;
+    top: 20%;
+    border-radius: 15%;
+    padding: 1%;
+    margin-top: 0.5vh;
+    transition-duration: 0.4s;
+    background-color: #B5A197;
+    color: #FAF9F6;
+    font-size: medium;
+}
+
+.sort:hover {
+    background-color: #B5A197;
+    /* Green */
+    color: #B5A197;
+    cursor: pointer;
+    border-color: #B5A197;
+    background-color: #FAF9F6;
+}
+
+#high {
+    position: sticky;
+    top: 10%;
+}
+
+#low {
+    position: sticky;
+    top: 20%;
+}
+
+#studySpots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container img {
+    height: 50vh;
+    width: 40%;
+    object-fit: cover;
+}
+
+.container button {
+    border-radius: 15%;
+    padding: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 5%;
+    transition-duration: 0.4s;
+    border-color: #B5A197;
+    background-color: #FAF9F6;
+    font-size: medium;
+    color: #B5A197;
+}
+
+.container button:hover {
+    background-color: #B5A197;
+    /* Green */
+    color: #FAF9F6;
+    cursor: pointer;
+}
+
+.container p {
+    color: #6E260E;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+
+    #studySpots {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
