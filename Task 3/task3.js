@@ -1,5 +1,6 @@
 window.onbeforeunload = function () { // sets scroll position of the window to a very large value (so apples wont be on the floor straight away)
     window.scrollTo(0, 100000);
+    setInterval(updateApplePositions, 100);
 }
 
 window.onload = function () { //triggered when html is fully loaded/rendered = anonymous function
