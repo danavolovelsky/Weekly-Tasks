@@ -4,8 +4,9 @@ body {
 
 h1,
 h2 {
+    font-family: 'Londrina Outline', cursive;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 4%;
     color: #6E260E;
 }
 
@@ -18,7 +19,7 @@ h2 {
     transition-duration: 0.4s;
     background-color: #B5A197;
     color: #FAF9F6;
-    font-size: medium;
+    font-family: 'Merriweather', serif;
 }
 
 .sort:hover {
@@ -68,8 +69,8 @@ h2 {
     transition-duration: 0.4s;
     border-color: #B5A197;
     background-color: #FAF9F6;
-    font-size: medium;
     color: #B5A197;
+    font-family: 'Merriweather', serif;
 }
 
 .container button:hover {
@@ -81,6 +82,7 @@ h2 {
 
 .container p {
     color: #6E260E;
+    font-family: 'Merriweather', serif;
 }
 
 @media screen and (min-width: 300px) and (max-width: 1024px) {

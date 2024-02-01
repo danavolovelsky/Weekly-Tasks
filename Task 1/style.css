@@ -20,7 +20,6 @@ body {
     height: 16px;
     font-size: initial;
     background-color: #e26f90;
-
 }
 
 #margin-header {
@@ -30,7 +29,6 @@ body {
     font-family: fantasy;
     text-align: center;
     padding-top: 5vh;
-
 }
 
 #margin-body {
@@ -40,10 +38,7 @@ body {
     top: 13vh;
     font-family: fantasy;
     text-align: center;
-
 }
-
-
 
 #margin-body label,
 button,
@@ -52,9 +47,6 @@ p {
     margin-bottom: 1.5vh;
 }
 
-
-
 button:hover {
     background-color: #e26f90;
-
 }
