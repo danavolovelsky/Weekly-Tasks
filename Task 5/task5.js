@@ -1,11 +1,10 @@
-
-
 const studySpots = document.querySelector("#studySpots");
-const low = document.querySelector("#low"); // button for ascending order
-const high = document.querySelector("#high"); // button for descending order
+const low = document.querySelector("#low"); // button for descending  order
+const high = document.querySelector("#high"); // button for ascending order
 
-let ratingArray= [];
+let ratingArray= []; //Array to store data
 
+//Getting the data from the google sheet
 async function getData () {
     try {
         const response = await fetch ('https://opensheet.elk.sh/1JVzI251KwjmqybTsCJ-avCFF005ErVaVDW7kwJzaAcU/Tabellenblatt1')
@@ -16,11 +15,10 @@ async function getData () {
     } catch (err){
         console.log(err);
     }
-    
 }
         function displayData(data){
             studySpots.innerHTML = "";
-
+//Displaying data from each row
         data.forEach((row) => {
             const container = document.createElement('div')
             const name = document.createElement('h2')
@@ -30,7 +28,6 @@ async function getData () {
             const consButton = document.createElement('button')  
             const pros = document.createElement('p')
             const cons = document.createElement('p')  
-
 
             container.append(name)
             container.append(rating)
@@ -54,14 +51,12 @@ async function getData () {
 
             pros.style.display = "none";
             cons.style.display = "none";
-
+        //Sort buttons functualities
             prosButton.addEventListener('click', () => {
                 pros.style.display = 'block';
                 prosButton.style.display = "none";
             });
         
-
-
             consButton.addEventListener('click', () => {
                 cons.style.display = 'block';
                 consButton.style.display = "none";
@@ -71,17 +66,17 @@ async function getData () {
         } )
     }
 
+// Event listener for sorting in descending order
+high.addEventListener('click', () => {
+    ratingArray.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating)); // Sort in descending order
+    displayData(ratingArray); // Display sorted data
+    window.scrollTo(0, 0); // Scroll to top of the page
+});
+
 low.addEventListener('click', () => {
     ratingArray.sort((a, b) => parseFloat(a.rating) - parseFloat(b.rating)); // sort in ascending order
     displayData(ratingArray);
     window.scrollTo(0, 0);
-});
-
-high.addEventListener('click', () => {
-    ratingArray.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating)); // sort in descending order
-    displayData(ratingArray);
-    window.scrollTo(0, 0);
-
 });
 
 getData();

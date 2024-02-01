@@ -1,4 +1,4 @@
-window.onbeforeunload = function () {
+window.onbeforeunload = function () { // sets scroll position of the window to a very large value (so apples wont be on the floor straight away)
     window.scrollTo(0, 100000);
 }
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     apple.style.position = "fixed";
                     apple.style.bottom = "0";
                     apple.style.top = "auto";
-                    apple.classList.add('animate__animated', 'animate__bounce');
+                    apple.classList.add('animate__animated', 'animate__bounce'); //animate css for bounce effect
                 }
             });
         }
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (var i = 0; i < appleNumber; i++) { //for every apple (50)
             var apple = document.createElement("img"); //creates new img element
             apple.src = "apple.png";
-            apple.className = "apple"; //assign apple class to apple eleent
+            apple.className = "apple"; //assign apple class to apple element
            
            
             apple.style.right = Math.random() * window.innerWidth + "px"; //random hotizontal position
@@ -45,3 +45,4 @@ document.addEventListener("DOMContentLoaded", function () {
         setInterval(updateApplePositions, 100); //checks and updates apple position every 100ms
     }
 });
+

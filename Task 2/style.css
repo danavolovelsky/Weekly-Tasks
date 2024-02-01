@@ -35,13 +35,13 @@ body {
 
 .header-item {
     text-align: center;
-
 }
 
 input[type="radio"] {
     display: none;
 }
 
+/*span elements that are direct siblings of input elements with the type radio*/
 input[type="radio"]+span {
     display: inline-block;
     width: 12px;
@@ -67,7 +67,6 @@ input[type="radio"]:checked+span {
 
 .visibility-button:hover {
     background: #000000;
-
 }
 
 .theme-image.house {
@@ -116,8 +115,6 @@ input[type="radio"]:checked+span {
     z-index: 1;
 }
 
-
-
 @media screen and (min-height: 880px) and (max-width: 1624px) and (orientation: landscape) {
 
     .theme-image.door,
@@ -133,5 +130,3 @@ input[type="radio"]:checked+span {
         width: 20%;
     }
 }
-
-@media screen and (min-width: 375px) and (max-width: 812px) and (orientation: landscape) {}

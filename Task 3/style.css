@@ -30,10 +30,9 @@ a {
     flex-direction: column;
     align-items: center;
     background: rgb(98, 140, 77);
-    /* Fallback color */
+    /*Gradient background green-white-blue*/
     background: linear-gradient(180deg, rgba(80, 170, 255, 1) 0%, rgba(232, 240, 237, 1) 18%, rgba(98, 140, 77, 1) 100%);
 }
-
 
 .grass img {
     position: fixed;
@@ -47,17 +46,15 @@ a {
 .apple {
     position: absolute;
     height: 10vw;
-
     z-index: 3;
 }
 
 .tree-top img {
     position: relative;
-    top: -26%;
-    left: 18%;
-    width: 65%;
+    top: -20%;
+    left: 19%;
+    width: 70%;
     z-index: 1;
-    /* Adjust the height as needed */
 }
 
 .tree-trunk img {
@@ -75,7 +72,23 @@ a {
     height: 40vh;
 }
 
-@media screen and (min-height: 880px) and (max-width: 1624px) and (orientation: landscape) {}
+@media screen and (min-height: 880px) and (max-width: 1624px) and (orientation: landscape) {
+    .tree-top {
+        width: 60%;
+    }
+
+    .tree-trunk img {
+        width: 7vw;
+    }
+
+    .apple {
+        height: 8vw;
+    }
+
+    .tree-top img {
+        width: 65%;
+    }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
@@ -83,5 +96,12 @@ a {
         width: 60%;
     }
 
+    .apple {
+        height: 6vw;
+    }
+
+    .tree-top img {
+        width: 60%;
+    }
 
 }

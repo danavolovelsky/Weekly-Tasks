@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add event listener to detect when the user has scrolled to the end of the story
         window.addEventListener('scroll', function() {
             if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                // Start a timer to show the second popup after 2 seconds
+                // Start a timer to show the second popup after 3 seconds
                 setTimeout(function() {
                     popup2.style.display = 'flex';
                 }, 3000);
@@ -26,14 +26,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const pages = document.querySelectorAll('.page');
 let startPosition = window.scrollY;
+//Observe intersection with individual pages
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
 
         const page = entry.target;
+        //different types of parallax animations
             const extraImageLeftRight = page.querySelector('.leftRight');
             const extraImageUpDown = page.querySelector('.upDown');
             const extraImageRotate = page.querySelector('.rotation');
 
+            //So yoffset wont just get bigger and make following pages animations faster
             const yOffset = Math.abs(window.scrollY - startPosition);
 
 
@@ -54,6 +57,7 @@ const observer = new IntersectionObserver((entries) => {
                 extraImageRotate.style.transform = 'rotate(30deg)';
             }
         } else {
+            //So when page is not intersected anymore image animates back to previous position
             startPosition = window.scrollY;
 
             const page = entry.target;
@@ -78,7 +82,7 @@ const observer = new IntersectionObserver((entries) => {
         }
         startPosition = window.scrollY;
     });
-}, { threshold: 0.75 }); // 50% of the page
+}, { threshold: 0.75 }); // 75% of the page
 
 pages.forEach(page => {
     observer.observe(page);

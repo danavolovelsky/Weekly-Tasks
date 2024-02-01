@@ -14,8 +14,11 @@
     <div class="parent-container">
         <fieldset>
             <button class="visibility-button"> 🎨 </button>
+
             <legend>Pick a theme</legend>
+
             <div class="grid-visibility hidden">
+
                 <div class="wrapper grid-header">
                     <div class="header-item"></div>
                     <div class="header-item">Cartoon</div>
@@ -25,7 +28,10 @@
                     <div class="header-item">Pencil</div>
                     <!--https://www.freepik.com/free-photos-vectors/house-outline/3-->
                 </div>
-                <!-- https://codepen.io/thekrkn/pen/KzLXLw-->
+
+                <!-- Help for the radio button grid: https://codepen.io/thekrkn/pen/KzLXLw-->
+                <!--Radio button setup cartoon is checked by default-->
+                <!--Span to group elements for styling purposes-->
                 <div class="wrapper">
                     <div class="flex-item">House</div>
                     <label class="flex-item">
@@ -37,8 +43,8 @@
                     <label class="flex-item">
                         <input type="radio" value="paper" name="house"> <span></span>
                     </label>
-
                 </div>
+
                 <div class="wrapper">
 
                     <div class="flex-item">Door</div>
@@ -51,10 +57,9 @@
                     <label class="flex-item">
                         <input type="radio" value="paper" name="door"> <span></span>
                     </label>
-
                 </div>
-                <div class="wrapper">
 
+                <div class="wrapper">
                     <div class="flex-item">Window</div>
                     <label class="flex-item">
                         <input type="radio" value="cartoon" name="window" checked> <span></span>
@@ -65,16 +70,19 @@
                     <label class="flex-item">
                         <input type="radio" value="paper" name="window"> <span></span>
                     </label>
-
                 </div>
             </div>
         </fieldset>
+
+        <!--Accessibility button-->
         <div class="toolbar">
             <h3>Text size:</h3>
             <button class="accessibility-button" id="increase-text-size">+</button>
             <button class="accessibility-button" id="decrease-text-size">--</button>
         </div>
     </div>
+
+    <!--Images-->
     <div id="image-container">
         <img src="cartoonHouse.png" alt="Cartoon style house" class="theme-image house cartoonHouse">
         <img src="paperHouse.png" alt="Pencil drawing style house" class="theme-image house paperHouse"
@@ -90,7 +98,9 @@
         <img src="paperWindow.png" alt="Pencil drawing style window" class="theme-image window" style="display: none;">
         <img src="pixelWindow.png" alt="Pixel style window" class="theme-image window" style="display: none;">
     </div>
+
     <script src="task2.js"></script>
+
 </body>
 
 </html>
