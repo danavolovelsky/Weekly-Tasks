@@ -2,6 +2,8 @@ body {
     position: relative;
     height: 1000vh;
     overflow-x: hidden;
+    background: linear-gradient(180deg, rgba(80, 170, 255, 1) 0%, rgba(232, 240, 237, 1) 18%, rgba(98, 140, 77, 1) 100%);
+
 }
 
 #gravity-link {
@@ -23,15 +25,34 @@ a {
     height: 100%;
 }
 
-.content {
-    position: relative;
-    flex: 3;
+.tree {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(98, 140, 77);
-    /*Gradient background green-white-blue*/
-    background: linear-gradient(180deg, rgba(80, 170, 255, 1) 0%, rgba(232, 240, 237, 1) 18%, rgba(98, 140, 77, 1) 100%);
+    width: 40%;
+    margin: auto;
+}
+
+.tree-top img,
+.tree-trunk img {
+    width: 100%;
+    object-fit: cover;
+    left: 50%;
+}
+
+.tree-top {
+    top: 50%;
+    width: 60%;
+    z-index: 1;
+    transform: scale(2) translateY(15%);
+}
+
+.tree-trunk img {
+    top: 4%;
+    right: 45%;
+    height: 1000vh;
+    width: 7vw;
+    object-fit: cover;
 }
 
 .grass img {
@@ -43,27 +64,14 @@ a {
     z-index: 2;
 }
 
+
 .apple {
     position: absolute;
     height: 10vw;
     z-index: 3;
 }
 
-.tree-top img {
-    position: relative;
-    top: -20%;
-    left: 19%;
-    width: 70%;
-    z-index: 1;
-}
 
-.tree-trunk img {
-    position: absolute;
-    top: 4%;
-    right: 45%;
-    height: 96%;
-    width: 9vw;
-}
 
 .isaac-newton img {
     position: fixed;
@@ -72,10 +80,9 @@ a {
     height: 40vh;
 }
 
+
 @media screen and (min-height: 880px) and (max-width: 1624px) and (orientation: landscape) {
-    .tree-top {
-        width: 60%;
-    }
+
 
     .tree-trunk img {
         width: 7vw;
@@ -88,6 +95,15 @@ a {
     .tree-top img {
         width: 65%;
     }
+
+    .tree-top {
+        top: 50%;
+        width: 60%;
+        z-index: 1;
+        transform: scale(3.2) translateX(20%) translateY(10%);
+    }
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -104,4 +120,13 @@ a {
         width: 60%;
     }
 
+}
+
+@media screen and (min-width: 321px) and (max-width: 940px) {
+    .tree-top {
+        top: 50%;
+        width: 60%;
+        z-index: 1;
+        transform: scale(3.2) translateX(20%) translateY(10%);
+    }
 }

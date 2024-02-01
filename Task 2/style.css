@@ -67,7 +67,6 @@ input[type="radio"]:checked+span {
     width: 100%;
     position: fixed;
     top: 33%;
-    /* Ensure position relative for absolute positioning inside */
 }
 
 .house-container {
@@ -75,21 +74,16 @@ input[type="radio"]:checked+span {
     flex-direction: column;
     align-items: center;
     width: 40%;
-
-    /* Adjust as needed */
 }
 
 .flex-container {
     width: 70%;
-    /* Adjust as needed */
 }
 
 .theme-image.house {
     display: block;
     width: 90%;
 }
-
-
 
 .theme-image.door,
 .theme-image.window {
@@ -119,5 +113,3 @@ input[type="radio"]:checked+span {
 
     }
 }
-
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
