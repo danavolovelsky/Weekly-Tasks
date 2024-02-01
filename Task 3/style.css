@@ -2,6 +2,7 @@ body {
     position: relative;
     height: 1000vh;
     overflow-x: hidden;
+    background-color: rgba(98, 140, 77, 1);
     background: linear-gradient(180deg, rgba(80, 170, 255, 1) 0%, rgba(232, 240, 237, 1) 18%, rgba(98, 140, 77, 1) 100%);
 
 }
